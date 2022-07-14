@@ -9,7 +9,7 @@ $contentzindex: 3;
 }
 
 .header {
-    position: fixed;
+    position: absolute;
     width: 100%;
     top: rem(52);
     left: 0;
@@ -132,6 +132,7 @@ $contentzindex: 3;
         color: #fff;
         @media only screen and (max-width: $md3) {
             margin-right: 0;
+            padding: 0 3px 0 3px;
         }
         @include lc0(0 10px 0 10px);
         a {
@@ -147,7 +148,12 @@ $contentzindex: 3;
     }
 
     &__logo {
-        height: 39px;
-        width: 83px;
+        @media only screen and (max-width: $md3) {
+            display: none;
+        }
+        svg {
+            height: 39px;
+            width: 83px;
+        }
     }
 }

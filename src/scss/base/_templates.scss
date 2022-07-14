@@ -1,0 +1,39 @@
+// ! buttons
+.btn {
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+
+   height: 52px;
+   width: 180px;
+   border: 1px solid;
+   span {
+      text-transform: uppercase;
+      @extend .mini-title;
+   }
+}
+
+.black-btn {
+   background-color: #191919;
+   border-style: #191919;
+   @extend .btn;
+   & > span {
+      color: #fff;
+   }
+}
+
+.white-btn {
+   @extend .btn;
+   border-style: #fff;
+   background-color: #fff;
+   & > span {
+      color: #000;
+   }
+}
+
+// ! titles
+.mini-title {
+   letter-spacing: em(1);
+   font-size: rem(12);
+   line-height: em(18);
+}

@@ -1,0 +1,47 @@
+@use "../modules/index" as *;
+
+.alcohol {
+   background-color: #996b60;
+   max-height: 800px;
+
+   &__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+   }
+
+   &__img {
+      flex: 1 1 50%;
+      
+   }
+
+   &__content {
+      flex: 1 1 50%;
+   }
+}
+
+.alcohol-content {
+   &__body {
+      padding: 0 0 100px 60px;
+      
+   }
+
+   &__title {
+      // font-family: Liberation Serif;
+      font-size: rem(73);
+      line-height: rem(96);
+      max-width: rem(507);
+      margin-bottom: rem(14);
+      color: #fff;
+   }
+
+   &__text {
+      margin-bottom: rem(45);
+      max-width: rem(572);
+      color: #fff;
+   }
+
+   &__button {
+      border: 1px solid #fff;
+   }
+}
