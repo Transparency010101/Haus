@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    include html/base/_head.html
+
+    <!-- * <<<Адаптив>>> -->
+    <!-- $ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=1440">
+    <!-- * <<</Адаптив>>> -->
+
+    include html/base/_fonts.html
+
+    <link rel="stylesheet" href="css/index.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    include html/modules/_mixins.pug
+    <div class="_wrapper">
+        include html/components/_header.html
+        <main class="_page">
+        </main>
+        include html/components/_footer.html
+    </div>
+    <script src="js/app.min.js"></script>
+    include html/base/_noscript.html
+</body>
+
+</html>

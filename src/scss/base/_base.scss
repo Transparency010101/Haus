@@ -1,0 +1,65 @@
+@use "../modules/vars" as *;
+@use "../modules/adaptive" as *;
+
+._container {
+   max-width: $container + px;
+   margin: 0 auto;
+   @media only screen and (max-width: $md1) {
+      max-width: 970px;
+   }
+   @media only screen and (max-width: $md2) {
+      max-width: 750px;
+   }
+   @media only screen and (max-width: $md3) {
+      max-width: none;
+      padding: 0 10px;
+   }
+}
+
+._wrapper {
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+}
+
+._page {
+   flex: 1 1 auto;
+}
+
+.noscript {
+   text-align: center;
+   margin: 200px 150px;
+   background-color: #f00;
+   padding: 15px;
+   border-radius: 10px;
+   color: #fff;
+   &__title {
+      font-size: 3rem;
+      margin: 20px 0;
+   }
+
+   &__title-sup {
+      font-size: 1.5rem;
+      margin: 20px 0;
+   }
+}
+
+.ibg {
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+   & > img {
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+   }
+}
+
+picture img {
+   height: 0;
+}

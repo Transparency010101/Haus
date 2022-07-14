@@ -1,0 +1,20 @@
+@use "sass:math";
+@use "./vars.scss" as *;
+
+@function rem($value) {
+    // * px to rem
+    $remValue: math.div($value, $main-font-size) + rem;
+    @return $remValue;
+}
+
+@function prc($pxOne, $pxTwo) {
+    // * px to prc
+    $remValue: math.div($pxOne, $pxTwo) * 100%;
+    @return $remValue;
+}
+
+@function em($value) {
+    // * px to em
+    $remValue: math.div($value, $main-font-size) + em;
+    @return $remValue;
+}

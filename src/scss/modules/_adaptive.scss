@@ -1,0 +1,29 @@
+@use "./vars" as v;
+@use "./funcs" as f;
+
+$md1: f.em(v.$container); // @ em
+$md2: f.em(992); // @ em
+$md3: f.em(767); // @ em
+$md4: f.em(479); // @ em
+
+@mixin AV($propetry: "font-size", $mobSize, $pcSize, $type: 1) {
+   $laptop-maxWidth: 1920;
+   @if $type == 1 {
+      // * Внутри ограничивающего контейнера (Inside the container)
+      @media only screen and (max-width: f.em($container + px)) {
+         #{$propetry}: calc(#{$mobSize + px} + (#{$pcSize} - #{$mobSize}) * ((100vw - 320px) / (#{$container} - 320)));
+      }
+   } @else if $type == 2 {
+      // * За пределами ограничивающего контейнера (Outside the container)
+      @media only screen and (min-width: f.em($container + px)) {
+         #{$propetry}: calc(
+            #{$mobSize + px} + (#{$pcSize} - #{$mobSize}) * ((100vw - 320px) / (#{$laptop-maxWidth} - 320))
+         );
+      }
+   } @else {
+      // * Отзывчивость по ширине (Width Responsiveness)
+      #{$propetry}: calc(
+         #{$mobSize + px} + (#{$pcSize} - #{$mobSize}) * ((100vw - 320px) / (#{$laptop-maxWidth} - 320))
+      );
+   }
+}

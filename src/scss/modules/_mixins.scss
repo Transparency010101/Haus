@@ -1,0 +1,27 @@
+@use "../modules/vars" as v;
+@use "../modules/funcs" as f;
+
+@mixin font(
+   $-font-size: v.$main-font-size,
+   $-line-height: v.$line-height,
+   $-font-weight: v.$main-font-weight,
+   $-color: v.$main-color
+) {
+   font-size: f.rem($-font-size);
+   line-height: f.em($-line-height);
+   font-weight: $-font-weight;
+   color: $-color;
+}
+
+@mixin lc0($-marigin: 0, $-type: '') {
+   @if $-type == '' {
+      &:last-child {
+         margin: $-marigin;
+      }
+   }
+   @else if $-type == "*" {
+      & > *:last-child {
+         margin: $-marigin;
+      }
+   }
+}
