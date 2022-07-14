@@ -11,7 +11,7 @@ $contentzindex: 3;
 .header {
     position: fixed;
     width: 100%;
-    top: 0;
+    top: rem(50);
     left: 0;
     z-index: 50;
     &::before {
@@ -88,5 +88,45 @@ $contentzindex: 3;
                 top: 0;
             }
         }
+    }
+
+    &__navigation {
+        margin-top: rem(30);
+
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.header-top {
+    width: 100%;
+    height: rem(50);
+    background-color: $c191919;
+    color: #fff;
+    text-align: center;
+    padding-top: em(10);
+}
+
+.header-navigation {
+    &__list-side {
+        display: flex;
+        @include lc0;
+    }
+
+    &__list-link {
+        margin-right: rem(64);
+        text-transform: uppercase;
+        a {
+            position: relative;
+            z-index: 50;
+            letter-spacing: em(1);
+            font-size: rem(12);
+            line-height: em(18);
+        }
+    }
+
+    &__logo {
     }
 }

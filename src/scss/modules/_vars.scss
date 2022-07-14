@@ -1,8 +1,10 @@
-$main-font-size: 14 !default; // @ rem
+$main-font-size: 18 !default; // @ rem
 $main-font-weight: 400 !default;
-$main-font-family: Arial, sans-serif !default;
-$line-height: 1 !default; // @ parts/rem
+$main-font-family: "Roboto", sans-serif !default;
+$line-height: 32 !default; // @ parts/rem
 $main-color: #000;
 
 $additionalPx: 10; // * Нужно что бы к стенкам не прилипал контент @ px
-$container: 1430 + $additionalPx; // @ px
+$container: 1310 + $additionalPx; // @ px
+
+$c191919: #191919;
