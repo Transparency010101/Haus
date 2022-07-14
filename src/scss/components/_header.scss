@@ -11,7 +11,7 @@ $contentzindex: 3;
 .header {
     position: fixed;
     width: 100%;
-    top: rem(50);
+    top: rem(52);
     left: 0;
     z-index: 50;
     &::before {
@@ -33,6 +33,7 @@ $contentzindex: 3;
         @media only screen and (max-width: $md3) {
             display: block;
             position: relative;
+            top: 10px;
             z-index: $contentzindex;
             width: 30px;
             height: 20px;
@@ -44,11 +45,11 @@ $contentzindex: 3;
                 left: 0;
                 width: 100%;
                 height: 3.33px;
-                background-color: #fff;
+                background-color: #000;
                 transition-duration: 300ms;
             }
             &::before {
-                top: 1px;
+                top: 0.5px;
             }
             &::after {
                 bottom: 1px;
@@ -61,13 +62,16 @@ $contentzindex: 3;
             &::before {
                 top: 7.5px;
                 transform: rotate(45deg);
+                background-color: #fff;
             }
             &::after {
                 transform: rotate(-45deg);
                 bottom: 9px;
+                background-color: #fff;
             }
             & span {
                 transform: scale(0);
+                background-color: #fff;
             }
         }
     }
@@ -97,6 +101,10 @@ $contentzindex: 3;
         justify-content: space-between;
         position: relative;
         z-index: 2;
+
+        @media only screen and (max-width: $md3) {
+            margin-top: rem(10);
+        }
     }
 }
 
@@ -112,21 +120,34 @@ $contentzindex: 3;
 .header-navigation {
     &__list-side {
         display: flex;
-        @include lc0;
+        @media only screen and (max-width: $md3) {
+            flex-direction: column;
+            text-align: center;
+        }
     }
 
     &__list-link {
         margin-right: rem(64);
         text-transform: uppercase;
+        color: #fff;
+        @media only screen and (max-width: $md3) {
+            margin-right: 0;
+        }
+        @include lc0(0 10px 0 10px);
         a {
             position: relative;
             z-index: 50;
             letter-spacing: em(1);
             font-size: rem(12);
             line-height: em(18);
+            @media only screen and (max-width: $md3) {
+                font-size: rem(15);
+            }
         }
     }
 
     &__logo {
+        height: 39px;
+        width: 83px;
     }
 }

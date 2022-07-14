@@ -10,12 +10,12 @@ $md4: f.em(479); // @ em
    $laptop-maxWidth: 1920;
    @if $type == 1 {
       // * Внутри ограничивающего контейнера (Inside the container)
-      @media only screen and (max-width: f.em($container + px)) {
-         #{$propetry}: calc(#{$mobSize + px} + (#{$pcSize} - #{$mobSize}) * ((100vw - 320px) / (#{$container} - 320)));
+      @media only screen and (max-width: f.em(v.$container)) {
+         #{$propetry}: calc(#{$mobSize + px} + (#{$pcSize} - #{$mobSize}) * ((100vw - 320px) / (#{v.$container} - 320)));
       }
    } @else if $type == 2 {
       // * За пределами ограничивающего контейнера (Outside the container)
-      @media only screen and (min-width: f.em($container + px)) {
+      @media only screen and (min-width: f.em(v.$container)) {
          #{$propetry}: calc(
             #{$mobSize + px} + (#{$pcSize} - #{$mobSize}) * ((100vw - 320px) / (#{$laptop-maxWidth} - 320))
          );
