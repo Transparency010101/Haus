@@ -144,6 +144,9 @@ $contentzindex: 3;
             @media only screen and (max-width: $md3) {
                 font-size: rem(15);
             }
+            &:hover {
+                opacity: 0.6;
+            }
         }
     }
 

@@ -45,3 +45,19 @@
       border: 1px solid #fff;
    }
 }
+
+.alcohol-col {
+   display: flex;
+   justify-content: space-between;
+   &__col {
+      flex: 1 1 33.333%;
+      text-align: center;
+   }
+
+   &__body {
+      span {
+         display: block;
+         margin-bottom: 36px;
+      }
+   }
+}

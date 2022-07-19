@@ -11,6 +11,9 @@
       text-transform: uppercase;
       @extend .mini-title;
    }
+   &:hover {
+      opacity: 0.6;
+   }
 }
 
 .black-btn {
