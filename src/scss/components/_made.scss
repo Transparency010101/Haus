@@ -1,0 +1,98 @@
+@use "../modules/index" as *;
+// : made
+// : made-col
+// : best-seller
+
+.made {
+   padding: 105px 0 60px 0;
+   &__header {
+      max-width: 703px;
+      text-align: center;
+      margin: 0 auto 80px auto;
+      @media only screen and (max-width: $md3) {
+         @include AV("margin-bottom", 0, 80, 1);
+      }
+   }
+
+   &__title {
+   }
+
+   &__sub-title {
+   }
+
+   &__col {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      flex-wrap: wrap;
+      margin-bottom: 140px;
+   }
+}
+
+.made-col {
+   &__col {
+      flex: 0 1 33.333%;
+      max-width: 372px;
+      margin: 0 18px;
+      position: relative;
+      @media only screen and (max-width: $md3) {
+         margin: 10px 0;
+      }
+   }
+
+   &__body {
+      text-align: center;
+      max-width: 100%;
+      *:last-child {
+         margin-bottom: 0;
+      }
+   }
+
+   &__img {
+      height: 451px;
+   }
+
+   &__title {
+      margin-bottom: 10px;
+   }
+
+   &__text {
+      margin-bottom: 22px;
+      @media only screen and (max-width: $md3) {
+         margin: 0 20px 22px 20px;
+      }
+   }
+
+   &__btn {
+      margin-bottom: 20px;
+   }
+
+   &__best-seller {
+      position: absolute;
+      z-index: 1;
+      right: 10px;
+      top: 10px;
+
+      width: 100px;
+      height: 100px;
+      background-color: #191919;
+      border-radius: 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media only screen and (max-width: $md3) {
+         right: 40px;
+         top: 10px;
+      }
+   }
+}
+
+.best-seller {
+   &__text {
+      position: absolute;
+      text-align: center;
+      z-index: 2;
+      color: #fff;
+   }
+}

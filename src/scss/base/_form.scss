@@ -22,7 +22,7 @@
 
 .black-btn {
    background-color: #191919;
-   border-style: #191919;
+   border-color: #191919;
    @extend .btn;
    & > span {
       color: #fff;
@@ -31,7 +31,7 @@
 
 .white-btn {
    @extend .btn;
-   border-style: #fff;
+   border-color: #fff;
    background-color: #fff;
    & > span {
       color: #000;
