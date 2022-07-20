@@ -7,10 +7,10 @@
 @use "./base/nullstyle";
 @use "./base/base";
 @use "./base/fonts";
-@use "./base/templates";
+@use "./base/ui";
+@use "./base/form";
 
 // layouts
-
 
 // components
 @use "./components/header";

@@ -1,15 +1,19 @@
+@use "../modules/index" as *;
+
 // ! buttons
 .btn {
    display: inline-flex;
-   justify-content: center;
    align-items: center;
+   justify-content: center;
 
    height: 52px;
    width: 180px;
    border: 1px solid;
    span {
       text-transform: uppercase;
-      @extend .mini-title;
+      letter-spacing: em(1);
+      font-size: rem(12);
+      line-height: em(18);
    }
    &:hover {
       opacity: 0.6;
@@ -32,11 +36,4 @@
    & > span {
       color: #000;
    }
-}
-
-// ! titles
-.mini-title {
-   letter-spacing: em(1);
-   font-size: rem(12);
-   line-height: em(18);
 }

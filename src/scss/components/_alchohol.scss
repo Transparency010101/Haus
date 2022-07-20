@@ -8,6 +8,7 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
+      margin-bottom: 53px;
    }
 
    &__img {
@@ -23,7 +24,6 @@
 .alcohol-content {
    &__body {
       padding: 0 0 100px 60px;
-      
    }
 
    &__title {
@@ -49,9 +49,15 @@
 .alcohol-col {
    display: flex;
    justify-content: space-between;
+   flex-wrap: wrap;
    &__col {
       flex: 1 1 33.333%;
+      max-width: 290px;
+      margin: 0 5px 20px 5px;
       text-align: center;
+      &:last-child {
+         margin-bottom: 0;
+      }
    }
 
    &__body {
