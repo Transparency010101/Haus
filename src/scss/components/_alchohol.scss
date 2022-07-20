@@ -1,19 +1,22 @@
 @use "../modules/index" as *;
 
 .alcohol {
-   background-color: #996b60;
-   max-height: 800px;
+   @media only screen and (max-width: em(1230)) {
+   }
 
    &__row {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
       margin-bottom: 53px;
+      background-color: #996b60;
    }
 
    &__img {
       flex: 1 1 50%;
-      
+      @media only screen and (max-width: em(1230)) {
+         display: none;
+      }
    }
 
    &__content {
@@ -24,6 +27,8 @@
 .alcohol-content {
    &__body {
       padding: 0 0 100px 60px;
+      @include AV("padding-bottom", 25, 100, 1);
+      @include AV("padding-left", 5, 60, 1);
    }
 
    &__title {
@@ -33,6 +38,11 @@
       max-width: rem(507);
       margin-bottom: rem(14);
       color: #fff;
+      @media only screen and (max-width: em(1230)) {
+         margin-top: 80px;
+      }
+      @include AV("font-size", 50, 73, 1);
+      @include AV("line-height", 65, 96, 1);
    }
 
    &__text {
@@ -50,6 +60,9 @@
    display: flex;
    justify-content: space-between;
    flex-wrap: wrap;
+   @media only screen and (max-width: $md3) {
+      justify-content: center;
+   }
    &__col {
       flex: 1 1 33.333%;
       max-width: 290px;
