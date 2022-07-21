@@ -4,6 +4,7 @@
 // : best-seller
 // : mede-aperitifs
 // : made-col2
+// : made-col3
 
 .made {
    padding: 105px 0 50px 0;
@@ -33,10 +34,14 @@
    &__col2 {
       display: flex;
       justify-content: space-between;
-      margin-top: 60px;
+      margin-bottom: 50px;
       @media only screen and (max-width: $md2) {
          justify-content: center;
       }
+   }
+
+   &__col3 {
+      background-color: #000000;
    }
 
    &__content-img {
@@ -190,5 +195,46 @@
       @media only screen and (max-width: $md2) {
          display: none;
       }
+   }
+}
+
+.made-col3 {
+   &__row {
+      display: flex;
+      justify-content: space-between;
+      padding: 50px 0 37px 0;
+      @media only screen and (max-width: $md3) {
+         flex-direction: column;
+         align-items: center;
+      }
+   }
+
+   &__body {
+      margin-bottom: 15px;
+      color: #fff;
+      text-align: center;
+      flex: 1 1 33.333%;
+      max-width: 318px;
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+
+   &__text {
+      margin-bottom: 13px;
+   }
+
+   &__sub-text {
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 21px;
+      margin-bottom: 5px;
+   }
+
+   &__verify {
+      font-size: 16px;
+      line-height: 24px;
+      color: #8A8A8A;
+      text-transform: capitalize;
    }
 }
