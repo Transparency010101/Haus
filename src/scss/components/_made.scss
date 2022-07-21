@@ -29,6 +29,11 @@
       margin-bottom: 140px;
    }
 
+   &__col2 {
+      display: flex;
+      justify-content: space-between;
+   }
+
    &__content-img {
       width: 100%;
       max-height: 560px;
@@ -134,5 +139,35 @@
       @media only screen and (max-width: $md2) {
          text-align: center;
       }
+   }
+}
+
+.made-col2 {
+   align-self: flex-end;
+   &__body {
+      max-width: 381px;
+      margin-bottom: 15px;
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+
+   &__title {
+      // font-family: Liberation Serif;
+      margin-bottom: 15px;
+      font-size: 30px;
+      line-height: 44px;
+   }
+
+   &__text {
+   }
+
+   &__title--big {
+      font-size: 36px;
+      line-height: 44px;
+   }
+
+   &__img {
+      margin-top: 60px;
    }
 }
