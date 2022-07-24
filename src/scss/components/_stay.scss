@@ -1,0 +1,87 @@
+@use "../modules/index" as *;
+
+.stay {
+   background-color: #000;
+   padding: 50px 0;
+   &__row {
+      display: flex;
+   }
+
+   &__form {
+      color: #fff;
+      max-width: 439px;
+      margin-right: 220px;
+   }
+
+   &__list {
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      flex: 1 1 auto;
+   }
+}
+
+.stay-form {
+   &__title {
+      // font-family: Liberation Serif;
+      font-size: 42px;
+      font-weight: 400;
+      line-height: 72px;
+      margin-bottom: 12px;
+   }
+
+   &__text {
+      font-size: 18px;
+      line-height: 27px;
+      margin-bottom: 30px;
+   }
+
+   &__input {
+      border-bottom: 1px solid #fff;
+      padding-bottom: 17px;
+      display: flex;
+      justify-content: space-between;
+      input {
+         color: #fff;
+         background-color: #000;
+         margin-left: 18px;
+         flex: 1 1 auto;
+      }
+      button {
+         background-color: #000;
+         color: #fff;
+         text-transform: uppercase;
+         letter-spacing: 0.12px;
+         &:hover {
+            opacity: 0.6;
+         }
+      }
+   }
+}
+
+.stay-list {
+   &__column {
+      flex: 1 1 33.333%;
+      margin-right: 80px;
+   }
+
+   &__title {
+      font-size: 14px;
+      line-height: 21px;
+      margin-bottom: 23px;
+   }
+
+   &__list {
+   }
+
+   &__list-item {
+      margin-bottom: 7px;
+   }
+
+   &__list-link {
+      opacity: 0.6;
+      &:hover {
+         opacity: 1;
+      }
+   }
+}
