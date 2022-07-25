@@ -1,18 +1,12 @@
 // * тут небольшие DOM/BOM скрипты
 
-// * Аккордион для stay
+// * Споилер для stay
 const stayTitles = document.querySelectorAll(".stay-list__title");
 
 stayTitles.forEach(title => {
    title.addEventListener("click", function (e) {
-
-      stayTitles.forEach(titleRemove => {
-         titleRemove.classList.remove("active");
-         titleRemove.nextElementSibling.classList.remove("active");
-      });
-
-      title.classList.add("active");
-      title.nextElementSibling.classList.add("active");
+      this.classList.toggle("active");
+      this.nextElementSibling.classList.toggle("active");
    });
 });
 
