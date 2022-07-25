@@ -4,7 +4,7 @@
 const stayTitles = document.querySelectorAll(".stay-list__title");
 
 stayTitles.forEach(title => {
-   title.addEventListener("click", function () {
+   title.addEventListener("click", function (e) {
 
       stayTitles.forEach(titleRemove => {
          titleRemove.classList.remove("active");

@@ -90,13 +90,47 @@
 
       @media only screen and (max-width: $md3) {
          position: relative;
+         display: inline-block;
          cursor: pointer;
+
+         span::before,
+         span::after {
+            content: "";
+            width: 13px;
+            height: 2px;
+            position: absolute;
+            top: 8px;
+            background-color: #fff;
+
+            transition: all ease 410ms 0s;
+         }
+
+         span::before {
+            transform: rotate(45deg);
+            right: -17px;
+         }
+
+         span::after {
+            transform: rotate(-45deg);
+            right: -25px;
+         }
+
+         &.active span::before {
+            transform: rotate(-45deg);
+         }
+
+         &.active span::after {
+            transform: rotate(45deg);
+         }
       }
    }
 
    &__list {
       @media only screen and (max-width: $md3) {
          display: none;
+         &.active {
+            display: block;
+         }
       }
    }
 
