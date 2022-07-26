@@ -24,10 +24,8 @@
    }
 
    &__col {
-      display: flex;
-      justify-content: center;
-      text-align: center;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       margin-bottom: 140px;
    }
 
@@ -57,12 +55,11 @@
 
 .made-col {
    &__col {
-      flex: 0 1 33.333%;
       max-width: 372px;
       margin: 0 18px;
       position: relative;
-      @media only screen and (max-width: $md3) {
-         margin: 10px 0;
+      @media only screen and (max-width: $md2) {
+         margin: 10px;
       }
    }
 

@@ -57,11 +57,10 @@
 }
 
 .alcohol-col {
-   display: flex;
-   justify-content: space-between;
-   flex-wrap: wrap;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
    @media only screen and (max-width: $md3) {
-      justify-content: center;
+      justify-items: center;
    }
    &__col {
       flex: 1 1 33.333%;
