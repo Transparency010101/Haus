@@ -1,8 +1,6 @@
 @use "../modules/index" as *;
 
 .alcohol {
-   @media only screen and (max-width: em(1230)) {
-   }
 
    &__row {
       display: flex;
@@ -14,6 +12,7 @@
 
    &__img {
       flex: 1 1 50%;
+      margin: 0 0 -9px 0;
       @media only screen and (max-width: em(1230)) {
          display: none;
       }
@@ -21,6 +20,7 @@
 
    &__content {
       flex: 1 1 50%;
+      overflow: hidden;
    }
 }
 

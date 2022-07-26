@@ -80,6 +80,7 @@
 
    &__title {
       margin-bottom: 10px;
+      white-space: nowrap;
    }
 
    &__text {
@@ -92,6 +93,7 @@
 
    &__btn {
       margin-bottom: 20px;
+      justify-self: flex-end;
    }
 
    &__best-seller {
